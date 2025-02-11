@@ -1,15 +1,15 @@
 class Solution:
     
-    nums = [3,6,2,3]
+    nums = [1,2,1,10]
+
 
     def largestPerimeter(nums):
         
         nums.sort(reverse =True)
         print(nums)
-        for i in range(len(nums)):
+        for i in range(len(nums)-2):
             if nums[i] < nums[i+1] + nums[i+2]:
                 return nums[i] + nums[i+1] + nums[i+2]
-            else:
-                return 0
+        return 0
     print(largestPerimeter(nums))
 
